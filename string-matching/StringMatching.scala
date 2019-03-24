@@ -14,7 +14,6 @@ object StringMatching {
     }
     for (s <- 0 to n-m) {
       if (p==t(s)) {
-        println(s"T.substring(s,s+m)=${T.substring(s,s+m)} P=$P")
         if (P==T.substring(s,s+m)) {
           print(s"Pattern occurs with shift $s")
         }
@@ -31,7 +30,6 @@ object StringMatching {
     var trans=HashMap[(Int,String),Int]()
     val m=P.length
     for (q <- 0 to m) {
-      println(s"q=$q")
       for (a <- alpha) {
         var k=scala.math.min(m+1,q+2)
         
